@@ -1,0 +1,75 @@
+# Build output and IDE caches (keep shared .vscode tasks/settings)
+bin/
+obj/
+.vs/
+.idea/
+.vscode/*.user
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+.DS_Store
+Thumbs.db
+.env
+# Local environment files
+.env.*
+!.env.example
+
+# Signing certificates and keys
+*.pfx
+*.p12
+*.keystore
+*.jks
+*.pem
+*.key
+*.mobileprovision
+*.cer
+*.snk
+
+# Local databases
+*.db
+*.db3
+*.db3-shm
+*.db3-wal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3-shm
+*.sqlite3-wal
+*.mdf
+*.ldf
+*.ndf
+*.bak
+
+# Local configuration overrides
+appsettings.Local.json
+appsettings.*.Local.json
+secrets.json
+NuGet.Config.local
+
+# Runtime uploads; bundled artwork and JSON/SQL reference data stay in Git
+src/AstralNexus.Web/wwwroot/images/cards/uploads/
+
+# Logs, test output and generated distribution packages
+*.log
+logs/
+TestResults/
+coverage/
+*.trx
+*.coverage
+*.coveragexml
+artifacts/
+publish/
+*.nupkg
+*.snupkg
+*.apk
+*.aab
+*.ipa
+*.msix
+*.msixbundle
+*.appx
+*.appxbundle

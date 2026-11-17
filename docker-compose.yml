@@ -1,0 +1,17 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    platform: linux/amd64
+    container_name: astral-nexus-sql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "${MSSQL_SA_PASSWORD:?Set MSSQL_SA_PASSWORD in the local .env file}"
+      MSSQL_PID: "Developer"
+    ports:
+      - "127.0.0.1:14333:1433"
+    volumes:
+      - astral_nexus_sql_data:/var/opt/mssql
+    restart: unless-stopped
+
+volumes:
+  astral_nexus_sql_data:

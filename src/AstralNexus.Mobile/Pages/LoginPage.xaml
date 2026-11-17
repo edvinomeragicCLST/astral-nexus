@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AstralNexus.Mobile.Pages.LoginPage" Title="Prijava">
+ <ScrollView><VerticalStackLayout Padding="24" Spacing="16"><Label Text="Prijava" Style="{StaticResource TitleLabel}"/><Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email"/><Entry x:Name="PasswordEntry" Placeholder="Lozinka" IsPassword="True"/><Label x:Name="ErrorLabel" TextColor="#D95050" IsVisible="False"/><Button Text="Prijavi se" Clicked="Login_Clicked"/><Button Text="Demo nalog" Style="{StaticResource SecondaryButton}" Clicked="Demo_Clicked"/></VerticalStackLayout></ScrollView>
+</ContentPage>

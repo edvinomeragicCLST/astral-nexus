@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AstralNexus.Mobile.Pages.WelcomePage" Title="Astral Nexus">
+  <ScrollView><VerticalStackLayout Padding="24" Spacing="18">
+    <Image Source="logo.png" HeightRequest="110" Aspect="AspectFit" />
+    <Label Text="ASTRAL NEXUS" Style="{StaticResource TitleLabel}" HorizontalTextAlignment="Center" />
+    <Label Text="Digitalna kolekcionarska kartaška igra" HorizontalTextAlignment="Center" />
+    <CarouselView x:Name="InfoCarousel" HeightRequest="210" IndicatorView="indicator">
+      <CarouselView.ItemTemplate><DataTemplate><Border Style="{StaticResource CardBorder}" Margin="4"><VerticalStackLayout Spacing="10" VerticalOptions="Center"><Label Text="{Binding Title}" Style="{StaticResource SectionLabel}" HorizontalTextAlignment="Center"/><Label Text="{Binding Text}" HorizontalTextAlignment="Center"/></VerticalStackLayout></Border></DataTemplate></CarouselView.ItemTemplate>
+    </CarouselView>
+    <IndicatorView x:Name="indicator" IndicatorColor="#8C8398" SelectedIndicatorColor="#7656D6" HorizontalOptions="Center" />
+    <Button Text="Prijava" Clicked="Login_Clicked" />
+    <Button Text="Registracija" Style="{StaticResource SecondaryButton}" Clicked="Register_Clicked" />
+    <Button Text="O aplikaciji" Style="{StaticResource SecondaryButton}" Clicked="About_Clicked" />
+    <Label Text="Demo: demo@astralnexus.local / Demo123!" FontSize="12" HorizontalTextAlignment="Center" Opacity="0.75" />
+  </VerticalStackLayout></ScrollView>
+</ContentPage>

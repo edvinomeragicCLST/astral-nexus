@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MAUI: restore workloads",
+      "type": "shell",
+      "command": "dotnet workload restore src/AstralNexus.Mobile/AstralNexus.Mobile.csproj -p:TargetFrameworks=net10.0-android",
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "MAUI: build Android",
+      "type": "shell",
+      "command": "dotnet build src/AstralNexus.Mobile/AstralNexus.Mobile.csproj -f net10.0-android -p:TargetFrameworks=net10.0-android",
+      "problemMatcher": "$msCompile",
+      "group": "build"
+    },
+    {
+      "label": "MAUI: run Android emulator",
+      "type": "shell",
+      "command": "dotnet build src/AstralNexus.Mobile/AstralNexus.Mobile.csproj -t:Run -f net10.0-android -p:TargetFrameworks=net10.0-android",
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "WEB: SQL Server up",
+      "type": "shell",
+      "command": "docker compose up -d",
+      "problemMatcher": []
+    },
+    {
+      "label": "WEB: run REST backend",
+      "type": "shell",
+      "command": "dotnet run --project src/AstralNexus.Web/AstralNexus.Web.csproj --urls http://localhost:5092",
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}

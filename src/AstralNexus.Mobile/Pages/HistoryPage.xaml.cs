@@ -1,0 +1,2 @@
+using AstralNexus.Mobile.Data; using AstralNexus.Mobile.Services;
+namespace AstralNexus.Mobile.Pages; public partial class HistoryPage:ContentPage{private readonly AppDatabase _db;private readonly SessionService _s;public HistoryPage(AppDatabase db,SessionService s){InitializeComponent();_db=db;_s=s;}protected override async void OnAppearing(){base.OnAppearing();if(_s.IsLoggedIn)HistoryView.ItemsSource=await _db.GetHistoryAsync(_s.CurrentUser!.Id);}}

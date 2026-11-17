@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AstralNexus.Mobile.Pages.HistoryPage" Title="Historija aktivnosti">
+ <CollectionView x:Name="HistoryView" Margin="14"><CollectionView.EmptyView><Label Text="Još nema aktivnosti."/></CollectionView.EmptyView><CollectionView.ItemTemplate><DataTemplate><Border Style="{StaticResource CardBorder}" Margin="0,0,0,8"><Grid RowDefinitions="Auto,Auto,Auto"><Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18"/><Label Grid.Row="1" Text="{Binding Detail}"/><Label Grid.Row="2" Text="{Binding DateText}" FontSize="11" Opacity="0.7"/></Grid></Border></DataTemplate></CollectionView.ItemTemplate></CollectionView>
+</ContentPage>
